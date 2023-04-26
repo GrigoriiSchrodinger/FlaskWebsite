@@ -1,0 +1,50 @@
+body {
+    background-color: #000000;
+}
+
+h1 {
+    color: white;
+    font-size: 36px;
+    margin-top: 50px;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+}
+p {
+    color: black;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+.left-side {
+  background-color: #000000;
+  flex-basis: 25%;
+}
+.right-side {
+  background-color: white;
+  flex-basis: 75%;
+    position: relative;
+}
+
+.title-side {
+    transform: translateY(120px);
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background-color: #fab007;
+    display: flex;
+    justify-content: center;
+}
+
+.title-side h1 {
+    margin: auto;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+}
