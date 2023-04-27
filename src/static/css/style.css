@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     background-color: #000000;
 }
@@ -13,25 +18,22 @@ p {
     color: black;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .wrapper {
   display: flex;
   height: 100vh;
 }
 
 .left-side {
-  background-color: #000000;
-  flex-basis: 25%;
+    background-color: #000000;
+    flex-basis: 25%;
+    align-items: center;
 }
 
-/*.image-side {*/
-/*    width: 100%;*/
-/*    height: %;*/
-/*}*/
+.image-side {
+    width: 80%;
+    margin: 0 auto;
+    transform: translateY(15px);
+}
 
 .image-side img {
     border-radius: 50%;
@@ -79,4 +81,64 @@ body {
     height: 100%;
 }
 
+.media {
+    text-align: center;
+    transform: translateY(15px);
 
+}
+
+.icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #f1f1f1;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px -5px #535c68;
+    color: #fab007;
+    overflow: hidden;
+    position: relative;
+}
+
+.icon i {
+    font-size: 50px;
+    transition: 0.3s linear;
+}
+
+.icon:hover i {
+    transform: scale(1.3);
+    color: #f1f1f1;
+}
+
+.icon::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #fab007;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+
+}
+
+.icon:hover::before {
+    animation: pounce 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+@keyframes pounce {
+    0% {
+        left: -110%;
+        top: 90%;
+    }
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+    100% {
+        top: -10%;
+        left: -10%;
+    }
+}
