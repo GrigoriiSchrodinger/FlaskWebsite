@@ -13,16 +13,17 @@ h1, h2, h3{
     font-family: 'Mulish', sans-serif;
 }
 
-h2 {
-    font-family: 'Mulish', sans-serif;
-}
-
 p {
     font-family: 'Mulish', sans-serif;
 }
 
 ul {
     font-family: 'Mulish', sans-serif;
+}
+
+li {
+    font-family: 'Mulish', sans-serif;
+
 }
 
 .wrapper {
@@ -59,23 +60,70 @@ nav a:hover {
 
 /*---------------------------------------------------ЛЕВАЯ СТОРОНА---------------------------------------------------*/
 
-.progress-bar{
+
+
+.left-side {
+    background-color: #17191e;
+    flex-basis: 32%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.image-container {
+    width: 60%;
+    margin: 15px auto 0;
+    position: relative;
+    display: inline-block;
+
+}
+
+.brief-information {
+        display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.brief-information li {
+    color: white;
+}
+
+.avatar {
+    border-radius: 50%;
+    display: block;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 2px 5px rgb(9, 9, 9);
+}
+
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.progress-bar h1 {
+    color: white;
+    text-align: right;
+    font-size: 20px;
 }
 
 .text-progress-bar {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .text-progress-bar p {
     color: white;
+    text-align: center;
 }
 
 progress {
-  width: 200px;
+  width: 220px;
   height: 24px;
   background: #2a2d32;
   border-radius: 8px;
@@ -84,7 +132,7 @@ progress {
 }
 
 progress::-webkit-progress-bar {
-  width: 200px;
+  width: 220px;
   height: 24px;
   background: #2a2d32;
   border-radius: 8px;
@@ -99,41 +147,9 @@ progress::-webkit-progress-value {
       #e58638 90.5%
     ),
     #ffd54a;
-  width: 200px;
+  width: 220px;
   height: 24px;
   border-radius: 8px;
-}
-
-progress::-moz-progress-bar {
-  width: 200px;
-  height: 24px;
-  background: #2a2d32;
-  border-radius: 8px;
-}
-
-.left-side {
-    background-color: #17191e;
-    flex-basis: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.image-container {
-    width: 80%;
-    margin: 15px auto 0;
-    position: relative;
-    display: inline-block;
-
-}
-
-.avatar {
-    border-radius: 50%;
-    display: block;
-    width: 100%;
-    height: auto;
-    box-shadow: 0 2px 5px rgb(9, 9, 9);
 }
 
 .media {
@@ -162,7 +178,7 @@ progress::-moz-progress-bar {
 .right-side {
     height: 100vh;
   background-color: white;
-  flex-basis: 75%;
+  flex-basis: 68%;
   position: relative;
   display: flex;
   flex-direction: column;
