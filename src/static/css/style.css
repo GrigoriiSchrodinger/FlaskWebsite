@@ -27,8 +27,8 @@ li {
 }
 
 .wrapper {
-    display: flex;
     position: fixed;
+    flex-direction: row-reverse;
 }
 
 .navigator-bar {
@@ -64,11 +64,54 @@ nav a:hover {
 
 .left-side {
     background-color: #17191e;
-    flex-basis: 32%;
+    /*flex-basis: 28%;*/
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
+    overflow: scroll;
+    width: 30%;
+    height: 100vh;
+    position: fixed; /* Добавляем position: fixed */
+    top: 0;
+    left: 0;
+    z-index: 999; /* Добавляем z-index */
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%); /* Изменяем начальное положение контейнера */
+}
+
+.left-side.active {
+    transform: translateX(0); /* Показываем контейнер */
+}
+
+.burger {
+    z-index: 9999;
+    position: fixed;
+    right: 20px; /* Устанавливаем позицию бургера слева по центру */
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.burger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease-in-out; /* Добавляем плавный переход для линий бургера */
+}
+
+.burger.active span:first-child {
+    transform: rotate(45deg) translate(6px, 6px); /* Поворачиваем первую линию бургера */
+}
+
+.burger.active span:nth-child(2) {
+    opacity: 0; /* Скрываем вторую линию бургера */
+}
+
+.burger.active span:last-child {
+    transform: rotate(-45deg) translate(6px, -6px); /* Поворачиваем последнюю линию бургера */
 }
 
 .image-container {
@@ -79,14 +122,67 @@ nav a:hover {
 
 }
 
-.brief-information {
-        display: flex;
-    flex-direction: column;
-    margin: 10px;
+.information-block-name {
+    display: flex;
+    width: 120px;
+    border-radius: 50px;
+    border: 2px solid #ffd54a;
+    padding: 10px 20px;
+    justify-content: center;
+    margin: 50px auto 10px;
 }
+
+.information-block-name p {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.brief-information {
+    display: flex;
+    flex-direction: column;
+}
+
+.block-of-information {
+    align-items: center;
+    display: flex;
+    margin-top: 15px;
+}
+
+.band-yellow-left {
+    display: flex;
+    width: 90px;
+    height: 45px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #ffd54a;
+    align-items: center;
+    justify-content: center;
+}
+
+.band-yellow-left-text {
+    margin-left: 20px;
+    color: white;
+}
+
+.band-yellow-left-text h1 {
+    font-size: 20px;
+}
+
+.band-yellow-left-text p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.45)
+}
+
+.band-yellow-left i {
+    font-size: 39px;
+}
+
 
 .brief-information li {
     color: white;
+    font-size: 20px;
 }
 
 .avatar {
@@ -107,6 +203,10 @@ nav a:hover {
     color: white;
     text-align: right;
     font-size: 20px;
+}
+
+.name-bar {
+    margin-top: 50px;
 }
 
 .text-progress-bar {
@@ -140,13 +240,13 @@ progress::-webkit-progress-bar {
 
 progress::-webkit-progress-value {
   background: linear-gradient(
-      113.96deg,
-      #ffd54a 36.35%,
-      #f5b74f 50.48%,
-      #ec9c42 74.02%,
-      #e58638 90.5%
-    ),
-    #ffd54a;
+          113.96deg,
+          #ffd54a 36.35%,
+          #f5b74f 50.48%,
+          #ec9c42 74.02%,
+          #e87820 90.5%
+  ),
+  #ffd54a;
   width: 220px;
   height: 24px;
   border-radius: 8px;
@@ -154,6 +254,7 @@ progress::-webkit-progress-value {
 
 .media {
     text-align: center;
+    margin: 10px;
 }
 
 .icon {
@@ -177,13 +278,11 @@ progress::-webkit-progress-value {
 
 .right-side {
     height: 100vh;
-  background-color: white;
-  flex-basis: 68%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  overflow: scroll;
-
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
 }
 
 .name-side {
