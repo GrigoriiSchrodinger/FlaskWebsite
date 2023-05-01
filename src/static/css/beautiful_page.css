@@ -1,0 +1,292 @@
+/*==============================================*/
+/*                 Секция 0: Общее*/
+/*==============================================*/
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #131313;
+}
+
+h1, h2, h3 {
+    font-family: 'Mulish', sans-serif;
+}
+
+p {
+    font-family: 'Mulish', sans-serif;
+}
+
+li {
+    font-family: 'Mulish', sans-serif;
+}
+
+/*==============================================*/
+/*             Секция 1: Верхнее меню*/
+/*==============================================*/
+
+/* --------------------------------- Контейнер начало ---------------------------------*/
+.menu-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.01);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    padding: 17px;
+    justify-content: space-between;
+    opacity: 1;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 1, 1);;
+}
+
+.menu-container.hide {
+    opacity: 0;
+}
+
+.menu-container nav {
+    justify-content: flex-end;
+}
+
+.menu-container nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container nav ul li {
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.menu-container nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: color 0.1s ease-in-out;
+}
+
+.menu-container a:hover {
+    color: #ffd54a;
+}
+/* --------------------------------- Контейнер конец ---------------------------------*/
+
+/* --------------------------------- Главы сайта начало ---------------------------------*/
+
+.menu-page-chapters {
+    display: flex;
+    align-items: center;
+}
+/* --------------------------------- Главы сайта конец ---------------------------------*/
+
+/* --------------------------------- Ссылки на медиа начало ---------------------------------*/
+.menu-icon-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.menu-icon {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #ffffff;
+    position: relative;
+}
+
+.menu-icon i {
+    font-size: 30px;
+    transition: 0.3s linear;
+}
+
+.menu-icon:hover i {
+    transform: scale(1.3);
+    color: #ffd54a;
+}
+/* --------------------------------- Ссылки на медиа конец ---------------------------------*/
+
+/*==============================================*/
+/*             Секция 2: Главный блок*/
+/*==============================================*/
+
+/* --------------------------------- Контейнер начало ---------------------------------*/
+.main-block-container {
+    background-image: url('../image/main_image.png');
+	background-size: cover;
+    background-position: center;
+    padding: 300px;
+    border-bottom: 2px solid #ffd54a;
+    box-shadow: 0 0 8px #ffd54a;
+
+}
+/* --------------------------------- Контейнер конец ---------------------------------*/
+
+/* --------------------------------- Фоновое изображение блока начало ---------------------------------*/
+.main-block-background-image {
+    line-height: 1.2em;
+}
+
+.main-block-background-image h1 {
+    color: #fff;
+    font-size: 48px;
+}
+
+.main-block-background-image p {
+    color: #fff;
+    font-size: 17px;
+}
+/* --------------------------------- Фоновое изображение блока конец ---------------------------------*/
+
+/* ---------------------------------  Специализация начало ---------------------------------*/
+.specialization {
+    display: flex;
+    border: 2px solid #ffd54a;
+    width: 120px;
+    border-radius: 30px;
+    padding: 0 5px;
+    justify-content: center;
+       position: relative;
+    top: 50px;
+}
+
+.specialization h3 {
+    color: white;
+}
+/* ---------------------------------  Специализация конец ---------------------------------*/
+
+/*==============================================*/
+/*             Секция 3: Разделитель*/
+/*==============================================*/
+.delimiter-container {
+    display: flex;
+    justify-content: center;
+}
+
+.delimiter {
+    width: 90px;
+    border-radius: 50px;
+    background-color: #ffd54a;
+    padding: 1px 20px;
+    transform: translateY(-28px);
+    text-align: center;
+}
+
+.delimiter h2 {
+    color: black;
+    font-size: 17px;
+}
+
+/*==============================================*/
+/*             Секция 4: Блок обо мне*/
+/*==============================================*/
+/* --------------------------------- Контейнер начало ---------------------------------*/
+.about-me-container {
+    display: flex;
+    /*background-color: #131313;*/
+    justify-content: space-around;
+}
+/* --------------------------------- Контейнер конец ---------------------------------*/
+
+/* --------------------------------- Контейнер прогрессия скиллов начало ---------------------------------*/
+.about-me-progress-bar-container {
+    background-color: rgba(14, 14, 14, 0.75);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 80px 50px 80px;
+    margin: 50px 50px 5px 50px;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.67);
+
+}
+
+.about-me-progress-bar-container h1 {
+    color: white;
+    text-align: right;
+    font-size: 20px;
+}
+
+progress {
+  width: 280px;
+  height: 24px;
+  background: #2a2d32;
+  border-radius: 8px;
+    margin: 5px 5px 5px 60px;
+
+}
+
+progress::-webkit-progress-bar {
+  width: 280px;
+  height: 24px;
+  background: #2a2d32;
+  border-radius: 8px;
+}
+
+progress::-webkit-progress-value {
+  background: linear-gradient(
+          113.96deg,
+          #ffd54a 36.35%,
+          #f5b74f 50.48%,
+          #ec9c42 74.02%,
+          #e87820 90.5%
+  ),
+  #ffd54a;
+  width: 280px;
+  height: 24px;
+  border-radius: 8px;
+}
+/* --------------------------------- Контейнер прогрессия скиллов конец ---------------------------------*/
+
+/* --------------------------------- Название блока про скиллы начало ---------------------------------*/
+.about-me-common-block-name {
+    border-radius: 50px;
+    border: 2px solid #ffd54a;
+    padding: 1px 20px;
+    margin: auto;
+}
+
+.about-me-common-block-name p {
+    color: white;
+}
+/* --------------------------------- Название блока про скиллы конец ---------------------------------*/
+
+/* --------------------------------- Название скиллов начало ---------------------------------*/
+.about-me-common-block-name-name-skills {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /*height: 100%;*/
+}
+
+.about-me-common-block-name-name-skills p {
+    color: white;
+    text-align: center;
+}
+/* --------------------------------- Название скиллов конец ---------------------------------*/
+
+
+.experience-information {
+    display: flex;
+    background-color: #131313;
+    justify-content: space-around;
+        padding: 300px;
+    border-bottom: 2px solid #ffd54a;
+    box-shadow: 0 0 8px #ffd54a;
+}
+
+
+.brief-information-text {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 50px 5px 50px;
+    justify-content: center;
+}
+
+.brief-information-text p {
+    color: white;
+}
+
+
+
+
+
+
