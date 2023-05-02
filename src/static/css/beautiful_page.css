@@ -158,16 +158,15 @@ li {
 /*==============================================*/
 .delimiter-container {
     display: flex;
+    padding: 1px 26px 1px 26px;
     justify-content: center;
 }
 
 .delimiter {
-    width: 90px;
     border-radius: 50px;
     background-color: #ffd54a;
     padding: 1px 20px;
     transform: translateY(-28px);
-    text-align: center;
 }
 
 .delimiter h2 {
@@ -181,21 +180,32 @@ li {
 /* --------------------------------- Контейнер начало ---------------------------------*/
 .about-me-container {
     display: flex;
-    /*background-color: #131313;*/
-    justify-content: space-around;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    border-bottom: 2px solid #ffd54a;
 }
 /* --------------------------------- Контейнер конец ---------------------------------*/
 
 /* --------------------------------- Контейнер прогрессия скиллов начало ---------------------------------*/
-.about-me-progress-bar-container {
-    background-color: rgba(14, 14, 14, 0.75);
-    border-radius: 50px;
+.about-me-card-container {
     display: flex;
     flex-direction: column;
-    padding: 50px 80px 50px 80px;
-    margin: 50px 50px 5px 50px;
+}
+.about-me-card {
+    background-color: rgba(14, 14, 14, 0.75);
     box-shadow: 0 0 15px rgba(10, 10, 10, 0.67);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 26px 16px 26px;
+    margin: 50px 50px 50px 50px;
+    transition: transform 0.4s ease-in-out;
+}
 
+.about-me-card:hover {
+  transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(10, 10, 10, 0.67);
 }
 
 .about-me-progress-bar-container h1 {
@@ -240,7 +250,8 @@ progress::-webkit-progress-value {
     border-radius: 50px;
     border: 2px solid #ffd54a;
     padding: 1px 20px;
-    margin: auto;
+    margin: auto auto 20px auto;
+
 }
 
 .about-me-common-block-name p {
@@ -254,7 +265,6 @@ progress::-webkit-progress-value {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    /*height: 100%;*/
 }
 
 .about-me-common-block-name-name-skills p {
@@ -268,7 +278,7 @@ progress::-webkit-progress-value {
     display: flex;
     background-color: #131313;
     justify-content: space-around;
-        padding: 300px;
+    padding: 300px;
     border-bottom: 2px solid #ffd54a;
     box-shadow: 0 0 8px #ffd54a;
 }
@@ -277,16 +287,45 @@ progress::-webkit-progress-value {
 .brief-information-text {
     display: flex;
     flex-direction: column;
-    margin: 50px 50px 5px 50px;
-    justify-content: center;
 }
 
 .brief-information-text p {
     color: white;
 }
 
+/*==============================================*/
+/*             Секция 5: Опыт работы*/
+/*==============================================*/
 
+.experience-card {
+    background-color: rgb(14, 14, 14);
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.67);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    padding: 16px 26px 16px 26px;
+    margin: 50px 50px 50px 50px;
+    transition: transform 0.4s ease-in-out;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.experience-card h1, p {
+    color: white;
+}
 
+.experience-card:hover {
+  transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(10, 10, 10, 0.67);
+}
 
-
+.vertical-line {
+    z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: yellow;
+  transform: translateX(-50%);
+}
