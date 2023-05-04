@@ -352,3 +352,37 @@ progress::-webkit-progress-value {
     border: 2px solid #ffd54a;
     padding: 1px 20px;
 }
+
+footer {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer__content {
+  margin: 0 auto;
+}
+
+.social-links {
+  padding: 0;
+  margin: 20px 0;
+
+
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-links a {
+  color: #ffffff;
+  font-size: 20px;
+    transition: 0.3s linear;
+
+}
+
+.social-links :hover {
+    transform: scale(1.2);
+    color: #ffd54a;
+}
