@@ -31,7 +31,8 @@ li {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.01);
+    background-color: #13131352;
+    backdrop-filter: blur(10px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 9999;
     padding: 17px;
@@ -184,6 +185,7 @@ li {
     justify-content: space-evenly;
     flex-direction: row;
     border-bottom: 2px solid #ffd54a;
+    padding-bottom: 50px;
 }
 /* --------------------------------- Контейнер конец ---------------------------------*/
 
@@ -302,7 +304,7 @@ progress::-webkit-progress-value {
     border-radius: 30px;
     display: flex;
     flex-direction: row;
-    padding: 16px 26px 16px 26px;
+    padding: 36px 56px 36px 56px;
     margin: 50px 50px 50px 50px;
     transition: transform 0.4s ease-in-out;
     justify-content: space-between;
@@ -330,7 +332,7 @@ progress::-webkit-progress-value {
 }
 
 .body-text {
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 .body-text h1, h2, h3, ul {
@@ -366,8 +368,6 @@ footer {
 .social-links {
   padding: 0;
   margin: 20px 0;
-
-
 }
 
 .social-links li {
