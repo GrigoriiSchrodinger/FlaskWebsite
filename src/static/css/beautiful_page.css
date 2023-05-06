@@ -114,7 +114,7 @@ li {
     background-image: url('../image/main_image.png');
 	background-size: cover;
     background-position: center;
-    padding: 300px;
+    padding: 340px;
     border-bottom: 2px solid #ffd54a;
     box-shadow: 0 0 8px #ffd54a;
 
@@ -196,7 +196,7 @@ li {
 }
 .about-me-card {
     background-color: rgba(14, 14, 14, 0.75);
-    box-shadow: 0 0 15px rgba(10, 10, 10, 0.67);
+    box-shadow: 0 0 5px rgba(10, 10, 10, 0.67);
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -207,7 +207,6 @@ li {
 
 .about-me-card:hover {
   transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(10, 10, 10, 0.67);
 }
 
 .about-me-progress-bar-container h1 {
@@ -300,7 +299,7 @@ progress::-webkit-progress-value {
 
 .experience-card {
     background-color: rgb(14, 14, 14);
-    box-shadow: 0 0 15px rgba(10, 10, 10, 0.67);
+    box-shadow: 0 0 5px rgba(10, 10, 10, 0.67);
     border-radius: 30px;
     display: flex;
     flex-direction: row;
@@ -317,7 +316,6 @@ progress::-webkit-progress-value {
 
 .experience-card:hover {
   transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(10, 10, 10, 0.67);
 }
 
 .vertical-line {
