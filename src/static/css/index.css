@@ -183,7 +183,7 @@ li {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
-    flex-direction: row;
+    flex-direction: column;
     border-bottom: 2px solid #ffd54a;
     padding-bottom: 50px;
 }
@@ -192,17 +192,19 @@ li {
 /* --------------------------------- Контейнер прогрессия скиллов начало ---------------------------------*/
 .about-me-card-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
 }
 .about-me-card {
     background-color: rgba(14, 14, 14, 0.75);
     box-shadow: 0 0 5px rgba(10, 10, 10, 0.67);
     border-radius: 30px;
     display: flex;
-    flex-direction: column;
     padding: 16px 26px 16px 26px;
     margin: 50px 50px 50px 50px;
     transition: transform 0.4s ease-in-out;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .about-me-card:hover {
