@@ -4,5 +4,5 @@ from . import main
 
 
 @main.route('/')
-def main_page():
+def beautiful_page():
     return render_template('index.html')
