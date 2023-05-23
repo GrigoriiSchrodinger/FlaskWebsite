@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="asset/logo_flask.png" alt="flask">
+    <img src="asset/logo_flask.jpeg" alt="flask">
 </div>
 
 ---
